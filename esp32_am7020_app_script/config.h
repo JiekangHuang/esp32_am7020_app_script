@@ -24,7 +24,7 @@
 #define ZH03B_BUFF_SIZE 32
 
 
-#define UPLOAD_INTERVAL (4.5 * 60000)
+#define UPLOAD_INTERVAL (15 * 60000)
 
 #define SerialMon Serial
 #define MONITOR_BAUDRATE BAUDRATE_115200
