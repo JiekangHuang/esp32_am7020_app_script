@@ -41,8 +41,8 @@
 /* apps script api config */
 #define HTTP_PORT 443
 #define HTTP_SERVER "script.google.com"
-#define APPS_SCRIPT_ID "AKfycbyFSCqAd1PgaMxNjcc9zuviCZg2_gk4mDi5bKakeJEWOkwcELw"
-#define GOOGLE_SHEET_ID "15U0LaoxaZT1b6kJ_yCZkp25Z5bOMT_ts8J2sPNmmzA4"
+#define APPS_SCRIPT_ID "<YOUR APPS SCRIPT ID>"
+#define GOOGLE_SHEET_ID "<YOUR GOOGLE SHEET ID>"
 #define HTTP_API "/macros/s/" APPS_SCRIPT_ID "/exec?id=" GOOGLE_SHEET_ID "&pm25=%s&co2=%s"
 
 #endif /* _CONFIG_H */
