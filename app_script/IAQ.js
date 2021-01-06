@@ -50,8 +50,25 @@ function handleResponse(request) {
             .build();
         sheet.insertChart(chart);
     }
-
     sheet.appendRow([sheet.getLastRow(), createAt, pm25, co2])
+    var cur_pm25_cell = sheet.getRange("C" + sheet.getLastRow());
+    var cur_co2_cell = sheet.getRange("D" + sheet.getLastRow());
+
+    if (cur_pm25_cell.getValue() > 53) {
+        cur_pm25_cell.setBackground("#e06666");
+    } else if (cur_pm25_cell.getValue() > 35) {
+        cur_pm25_cell.setBackground("#f6b26b");
+    } else {
+        cur_pm25_cell.setBackground("#6aa84f");
+    }
+
+    if (cur_co2_cell.getValue() > 1000) {
+        cur_co2_cell.setBackground("#e06666");
+    } else if (cur_co2_cell.getValue() > 700) {
+        cur_co2_cell.setBackground("#f6b26b");
+    } else {
+        cur_co2_cell.setBackground("#6aa84f");
+    }
 
     var callback = request.parameters.callback;
     if (callback === undefined) {
